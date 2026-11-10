@@ -1,0 +1,6 @@
+[
+  { "code": "NZ", "name": "New Zealand", "currency": "NZD", "flag": "🇳🇿" },
+  { "code": "AU", "name": "Australia", "currency": "AUD", "flag": "🇦🇺" },
+  { "code": "CA", "name": "Canada", "currency": "CAD", "flag": "🇨🇦" },
+  { "code": "GB", "name": "United Kingdom", "currency": "GBP", "flag": "🇬🇧" }
+]

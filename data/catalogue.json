@@ -1,0 +1,1528 @@
+[
+  {
+    "id": "ais-it-180",
+    "country": "NZ",
+    "institution": "Auckland Institute of Studies",
+    "title": "Information Technology",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "Private provider",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + project",
+    "credits": 180,
+    "durationMonths": 16,
+    "intakeText": "2 Feb / 24 May / 13 Sep",
+    "intakes": [
+      {
+        "date": "2027-02-02",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-05-24",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-09-13",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 47834,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 incl. resources, plus levy",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.ais.ac.nz/study/information-technology/7.600-master-of-information-technology",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "auckland-digital-security-120",
+    "country": "NZ",
+    "institution": "University of Auckland",
+    "title": "Professional Studies · Digital Security",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + project",
+    "credits": 120,
+    "durationMonths": 12,
+    "intakeText": "Mar / Jul · confirm both",
+    "intakes": [
+      {
+        "date": "2027-03",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 58258,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 degree-wide upper estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-professional-studies-mprofstuds.html",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "auckland-it-180",
+    "country": "NZ",
+    "institution": "University of Auckland",
+    "title": "Information Technology",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + internship",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "1 Mar / 19 Jul",
+    "intakes": [
+      {
+        "date": "2027-03-01",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 86961,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 rate × 1.5",
+      "calculation": "NZD 57974.00 × 1.5 = NZD 86961. Assumes constant annual rate for 180 credits; confirm the quote."
+    },
+    "sources": [
+      {
+        "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-information-technology-minfotech.html",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "aut-cis-180",
+    "country": "NZ",
+    "institution": "Auckland University of Technology",
+    "title": "Computer and Information Sciences",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + research",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "22 Feb / 12 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-12",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 74190,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 rate × 1.5 incl. levy",
+      "calculation": "NZD 49460.00 × 1.5 = NZD 74190. Assumes constant annual rate for 180 credits; confirm the quote."
+    },
+    "sources": [
+      {
+        "url": "https://www.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences/courses/master-of-computer-and-information-sciences",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "aut-it-project-120",
+    "country": "NZ",
+    "institution": "Auckland University of Technology",
+    "title": "IT Project Management",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "University",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + project",
+    "credits": 120,
+    "durationMonths": 12,
+    "intakeText": "22 Feb / 12 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-12",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 49460,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 incl. student levy",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.aut.ac.nz/study/study-options/engineering-computer-and-mathematical-sciences/courses/master-of-it-project-management",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "canterbury-bis-180",
+    "country": "NZ",
+    "institution": "University of Canterbury",
+    "title": "Business Information Systems",
+    "campuses": [
+      "Christchurch"
+    ],
+    "providerType": "University",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + applied work or research",
+    "credits": 180,
+    "durationMonths": 17,
+    "intakeText": "Feb / Jul",
+    "intakes": [
+      {
+        "date": "2027-02",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 59400,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 published",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-business-information-systems",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "canterbury-professional-cs-180",
+    "country": "NZ",
+    "institution": "University of Canterbury",
+    "title": "Professional Computer Science",
+    "campuses": [
+      "Christchurch"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + advanced project",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "Feb",
+    "intakes": [
+      {
+        "date": "2027-02",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 71400,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 published",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.canterbury.ac.nz/study/academic-study/qualifications/professional-master-of-computer-science",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "eit-it-180",
+    "country": "NZ",
+    "institution": "EIT",
+    "title": "Information Technology · 180 credits",
+    "campuses": [
+      "Auckland",
+      "Napier"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied IT",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "9 Feb / 27 Apr / 20 Jul / 5 Oct",
+    "intakes": [
+      {
+        "date": "2027-02-09",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-04-27",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-20",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-10-05",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 42000,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Unverified",
+      "basis": "Published before scholarship",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.eit.ac.nz/programmes/master-of-information-technology/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "eit-it-240",
+    "country": "NZ",
+    "institution": "EIT",
+    "title": "Information Technology · 240 credits",
+    "campuses": [
+      "Auckland",
+      "Napier"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied IT",
+    "credits": 240,
+    "durationMonths": 24,
+    "intakeText": "9 Feb / 27 Apr / 20 Jul / 5 Oct",
+    "intakes": [
+      {
+        "date": "2027-02-09",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-04-27",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-20",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-10-05",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 56000,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Unverified",
+      "basis": "Published before scholarship",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.eit.ac.nz/programmes/master-of-information-technology/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "lincoln-applied-computing-180",
+    "country": "NZ",
+    "institution": "Lincoln University",
+    "title": "Applied Computing",
+    "campuses": [
+      "Lincoln"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + client projects",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "22 Feb / 19 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 63000,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2026,
+      "label": "Estimated",
+      "basis": "2026 published estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.lincoln.ac.nz/study/study-programmes/programme-search/master-of-applied-computing/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "massey-info-sciences-180",
+    "country": "NZ",
+    "institution": "Massey University",
+    "title": "Information Sciences",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + professional project",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "Feb / Jul normally · confirm",
+    "intakes": [
+      {
+        "date": "2027-02",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 71235,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 rate × 1.5",
+      "calculation": "NZD 47490.00 × 1.5 = NZD 71235. Assumes constant annual rate for 180 credits; confirm the quote."
+    },
+    "sources": [
+      {
+        "url": "https://www.massey.ac.nz/study/all-qualifications-and-degrees/master-of-information-sciences-PMINS/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "nmit-it-180",
+    "country": "NZ",
+    "institution": "NMIT",
+    "title": "Information Technology",
+    "campuses": [
+      "Nelson"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + applied research",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "22 Feb / 19 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": null,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Unverified",
+      "basis": "International total unverified",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.nmit.ac.nz/study/programmes/master-of-it",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "nzse-bi-180",
+    "country": "NZ",
+    "institution": "NZSE",
+    "title": "Business Intelligence",
+    "campuses": [
+      "Auckland CBD"
+    ],
+    "providerType": "Private provider",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + capstone",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "Confirm 2027 starts",
+    "intakes": [
+      {
+        "date": null,
+        "precision": "unknown",
+        "status": "unknown"
+      }
+    ],
+    "fee": {
+      "amount": 39000,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Unverified",
+      "basis": "Incl. materials, before award",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://nzse.ac.nz/study-options/business-technologies/master-of-business-intelligence-level-9/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "op-bis-180",
+    "country": "NZ",
+    "institution": "Otago Polytechnic Auckland International Campus",
+    "title": "Applied Management · Business Information Systems",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied management",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "2 Feb / 19 Apr / 19 Jul / 4 Oct",
+    "intakes": [
+      {
+        "date": "2027-02-02",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-04-19",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-10-04",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 42885,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Estimated",
+      "basis": "Published reference price",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://auckland.op.ac.nz/our-programmes/business/master-of-applied-management-business-information-systems",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "otago-applied-cs-180",
+    "country": "NZ",
+    "institution": "University of Otago",
+    "title": "MSc (Applied) · Computer Science",
+    "campuses": [
+      "Dunedin"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Coursework + project",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "Feb / Jul · confirm pathway",
+    "intakes": [
+      {
+        "date": "2027-02",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 74760,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 published",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.otago.ac.nz/study/qualifications/master-of-science-applied?subject=641881",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "sit-it-180",
+    "country": "NZ",
+    "institution": "Southern Institute of Technology",
+    "title": "Information Technology",
+    "campuses": [
+      "Invercargill"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied IT",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "15 Feb / 12 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-15",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-12",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 33700,
+      "currency": "NZD",
+      "scope": "partial",
+      "year": null,
+      "label": "Unverified",
+      "basis": "Incl. advertised award + resources",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.sit.ac.nz/International/Subjects-Fees-Scholarships",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "ucol-it-180",
+    "country": "NZ",
+    "institution": "UCOL",
+    "title": "Information Technology",
+    "campuses": [
+      "Palmerston North"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied IT",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "15 Feb / 19 Jul listed",
+    "intakes": [
+      {
+        "date": "2027-02-15",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 42306,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Estimated",
+      "basis": "Estimate from year + semester",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.ucol.ac.nz/programmes/information-technology/master-of-information-technology",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "unitec-computing-180",
+    "country": "NZ",
+    "institution": "Unitec",
+    "title": "Applied Technologies · Computing",
+    "campuses": [
+      "Auckland"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied project or thesis",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "Feb / Jul",
+    "intakes": [
+      {
+        "date": "2027-02",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 46991,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 rate × 1.5",
+      "calculation": "NZD 31327.33 × 1.5 = NZD 46991. Assumes constant annual rate for 180 credits; confirm the quote."
+    },
+    "sources": [
+      {
+        "url": "https://www.unitec.ac.nz/career-and-study-options/computing-and-information-technology/master-of-applied-technologies-computing/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "waikato-digital-business-180",
+    "country": "NZ",
+    "institution": "University of Waikato",
+    "title": "Digital Business",
+    "campuses": [
+      "Hamilton"
+    ],
+    "providerType": "University",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught professional",
+    "credits": 180,
+    "durationMonths": 12,
+    "intakeText": "Mar / Jul",
+    "intakes": [
+      {
+        "date": "2027-03",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 62748,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.waikato.ac.nz/study/qualifications/master-of-digital-business",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "waikato-it-180",
+    "country": "NZ",
+    "institution": "University of Waikato",
+    "title": "Information Technology · 180 points",
+    "campuses": [
+      "Hamilton"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + internship",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "Mar / Jul",
+    "intakes": [
+      {
+        "date": "2027-03",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 72765,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 fee schedule estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.waikato.ac.nz/study/qualifications/master-of-information-technology",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "waikato-it-240",
+    "country": "NZ",
+    "institution": "University of Waikato",
+    "title": "Information Technology · 240 points",
+    "campuses": [
+      "Hamilton"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + internship",
+    "credits": 240,
+    "durationMonths": null,
+    "intakeText": "Mar / Nov",
+    "intakes": [
+      {
+        "date": "2027-03",
+        "precision": "month",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-11",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 97020,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 fee schedule estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.waikato.ac.nz/study/qualifications/master-of-information-technology",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "wellington-business-analysis-180",
+    "country": "NZ",
+    "institution": "Victoria University of Wellington",
+    "title": "Professional Business Analysis",
+    "campuses": [
+      "Wellington"
+    ],
+    "providerType": "University",
+    "studyArea": "Business & management",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught conversion",
+    "credits": 180,
+    "durationMonths": 16,
+    "intakeText": "22 Feb / Jul to confirm",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07",
+        "precision": "month",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 61700,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2026,
+      "label": "Estimated",
+      "basis": "2026 planning estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-professional-business-analysis/overview",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "wellington-cs-180",
+    "country": "NZ",
+    "institution": "Victoria University of Wellington",
+    "title": "Computer Science",
+    "campuses": [
+      "Wellington"
+    ],
+    "providerType": "University",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Coursework + research project",
+    "credits": 180,
+    "durationMonths": 12,
+    "intakeText": "22 Feb · later start unverified",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 68150,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2026,
+      "label": "Estimated",
+      "basis": "Reported 2026 estimate",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-computer-science/overview",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "wellington-ux-180",
+    "country": "NZ",
+    "institution": "Victoria University of Wellington",
+    "title": "User Experience Design",
+    "campuses": [
+      "Wellington"
+    ],
+    "providerType": "University",
+    "studyArea": "Design",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Design pivot · taught + capstone",
+    "credits": 180,
+    "durationMonths": 12,
+    "intakeText": "22 Feb",
+    "intakes": [
+      {
+        "date": "2027-02-22",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 66450,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Estimated",
+      "basis": "University brochure reference",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.wgtn.ac.nz/explore/postgraduate-programmes/master-of-user-experience-design/overview",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "weltec-it-180",
+    "country": "NZ",
+    "institution": "Whitireia and WelTec",
+    "title": "Information Technology",
+    "campuses": [
+      "Petone, Lower Hutt"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied research",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "1 Mar / 19 Jul",
+    "intakes": [
+      {
+        "date": "2027-03-01",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 40500,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Estimated",
+      "basis": "2027 indicative",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.whitireiaweltec.ac.nz/study-programmes/information-technology/information-technology/master-of-information-technology",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "whitecliffe-cyber-180",
+    "country": "NZ",
+    "institution": "Whitecliffe",
+    "title": "Information Technology · Cyber Security",
+    "campuses": [
+      "Auckland",
+      "Wellington",
+      "Christchurch"
+    ],
+    "providerType": "Private provider",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Taught + project",
+    "credits": 180,
+    "durationMonths": null,
+    "intakeText": "29 Mar",
+    "intakes": [
+      {
+        "date": "2027-03-29",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": null,
+      "currency": "NZD",
+      "scope": "full",
+      "year": 2027,
+      "label": "Unverified",
+      "basis": "2027 full fee unverified",
+      "calculation": null
+    },
+    "sources": [
+      {
+        "url": "https://www.whitecliffe.ac.nz/qualification/master-of-information-technology/",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  },
+  {
+    "id": "wintec-applied-it-180",
+    "country": "NZ",
+    "institution": "Wintec",
+    "title": "Applied Information Technology",
+    "campuses": [
+      "Hamilton"
+    ],
+    "providerType": "Polytechnic",
+    "studyArea": "Computing & technology",
+    "qualification": "Master’s degree (Level 9)",
+    "programmeType": "Applied project or thesis",
+    "credits": 180,
+    "durationMonths": 18,
+    "intakeText": "15 Feb / 19 Jul",
+    "intakes": [
+      {
+        "date": "2027-02-15",
+        "precision": "day",
+        "status": "tentative"
+      },
+      {
+        "date": "2027-07-19",
+        "precision": "day",
+        "status": "tentative"
+      }
+    ],
+    "fee": {
+      "amount": 41200,
+      "currency": "NZD",
+      "scope": "full",
+      "year": null,
+      "label": "Estimated",
+      "basis": "Older annual rate × 1.5",
+      "calculation": "NZD 27466.67 × 1.5 = NZD 41200. Assumes constant annual rate for 180 credits; confirm the quote."
+    },
+    "sources": [
+      {
+        "url": "https://www.wintec.ac.nz/study-at-wintec/courses/information-technology/master-of-applied-information-technology-%28level-9%29",
+        "status": "unverified",
+        "lastVerifiedAt": null,
+        "facts": [
+          "programme",
+          "campuses",
+          "intakes",
+          "fee",
+          "entry"
+        ]
+      }
+    ],
+    "entry": "Ask admissions to confirm degree equivalence, grade, subject prerequisites and English requirements.",
+    "deadline": null,
+    "otherFees": "Not confirmed; request a separate compulsory-fee quote.",
+    "rank": null,
+    "rankingEdition": null
+  }
+]

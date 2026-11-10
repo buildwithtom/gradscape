@@ -1,0 +1,57 @@
+[
+  {
+    "id": "auckland-it-180",
+    "status": "verified",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": [
+      "2027 intakes: 1 March and 19 July",
+      "180-point pathway",
+      "International annual tuition: NZD 57974, indicative",
+      "Entry grade and English requirements",
+      "Semester One application deadline: 8 December 2026"
+    ],
+    "note": "Official programme page checked. NZD 57974 × 1.5 = NZD 86961 is a whole-programme estimate, assuming a constant 120-point annual rate. Other workbook facts remain unverified."
+  },
+  {
+    "id": "canterbury-bis-180",
+    "status": "verified",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": ["2027 international tuition: NZD 59400 for 180 points"],
+    "note": "Official programme fee checked. Intakes, duration and entry rules still require separate checks."
+  },
+  {
+    "id": "waikato-it-180",
+    "status": "conflict",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": [
+      "Programme: Hamilton, 180-point option",
+      "March/July intake pattern",
+      "Official displayed international tuition: NZD 72471, year unspecified"
+    ],
+    "note": "Workbook estimates NZD 72765 for 2027; official programme page displays NZD 72471 without a fee year. Keep the workbook estimate flagged; request the 2027 fee schedule before resolving."
+  },
+  {
+    "id": "waikato-it-240",
+    "status": "conflict",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": [
+      "240-point pathway: March/November intake pattern",
+      "Official displayed international tuition: NZD 98217, year unspecified"
+    ],
+    "note": "Workbook estimates NZD 97020 for 2027; official page displays NZD 98217 without a fee year. Keep the workbook estimate flagged until a 2027 schedule is checked."
+  },
+  {
+    "id": "eit-it-180",
+    "status": "verified",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": ["Programme page lists February, April, July and October intake months"],
+    "note": "The page does not establish the workbook’s precise 2027 dates or international full tuition. Those remain unverified."
+  },
+  {
+    "id": "eit-it-240",
+    "status": "verified",
+    "lastVerifiedAt": "2026-11-10",
+    "facts": ["Programme page lists February, April, July and October intake months"],
+    "note": "The page does not establish pathway-specific 2027 dates or international full tuition. Those remain unverified."
+  }
+]
