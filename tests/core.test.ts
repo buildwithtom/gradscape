@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import {
   filterProgrammes,
+  tuitionRange,
+  changeFilterCurrency,
   initialFilters,
   programmes,
   convert,
@@ -145,5 +147,40 @@ describe('maintenance', () => {
     expect(() => parseCsv(blank.replace('id,', 'privateNotes,'))).toThrow(
       'Missing template columns',
     );
+  });
+});
+
+describe('tuition range and display currency', () => {
+  it('uses only available full quotes and returns an empty state without quotes or rates', () => {
+    const base = programmes[0];
+    const rows = [
+      { ...base, fee: { ...base.fee, amount: 45000 } },
+      { ...base, fee: { ...base.fee, amount: 999999, scope: 'annual' as const } },
+      { ...base, fee: { ...base.fee, amount: 999999, scope: 'partial' as const } },
+      { ...base, fee: { ...base.fee, amount: null } },
+    ];
+    expect(tuitionRange(rows, 'NZD', rates)).toEqual({ min: 0, max: 45000 });
+    expect(tuitionRange(rows, 'INR', rates)).toEqual({ min: 0, max: 2500000 });
+    expect(tuitionRange([], 'NZD', rates)).toBeNull();
+    expect(tuitionRange(rows, 'AUD', rates)).toBeNull();
+  });
+  it('keeps no maximum distinct from a zero budget and blocks missing conversion rates', () => {
+    expect(changeFilterCurrency(f, 'INR', rates)?.budget).toBe('');
+    expect(changeFilterCurrency({ ...f, budget: '0' }, 'INR', rates)?.budget).toBe('0');
+    expect(changeFilterCurrency({ ...f, budget: '50000' }, 'INR', rates)?.budget).toBe('2645000');
+    expect(changeFilterCurrency({ ...f, budget: '50000' }, 'AUD', rates)).toBeNull();
+  });
+  it('preserves exact fee boundaries and results through a currency round trip', () => {
+    for (const p of programmes) {
+      const amount = fullFee(p);
+      if (amount === null) continue;
+      const original = { ...f, budget: String(amount) };
+      const converted = changeFilterCurrency(original, 'INR', rates)!;
+      const back = changeFilterCurrency(converted, 'NZD', rates)!;
+      const ids = (filters: typeof f) =>
+        filterProgrammes(programmes, filters, rates).map((p) => p.id);
+      expect(ids(converted)).toEqual(ids(original));
+      expect(ids(back)).toEqual(ids(original));
+    }
   });
 });

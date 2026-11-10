@@ -29,6 +29,8 @@ import {
   months,
   initialFilters,
   filterProgrammes,
+  tuitionRange,
+  changeFilterCurrency,
   money,
   convert,
   fullFee,
@@ -230,13 +232,21 @@ function Fee({
   rates: Record<string, number>;
   currency: string;
 }) {
-  const other = currency === p.fee.currency ? 'INR' : currency;
+  const converted = convert(p.fee.amount, p.fee.currency, currency, rates);
+  const isConverted = currency !== p.fee.currency;
+  const secondaryCurrency = isConverted ? p.fee.currency : currency === 'NZD' ? 'INR' : 'NZD';
+  const secondaryAmount = isConverted
+    ? p.fee.amount
+    : convert(p.fee.amount, p.fee.currency, secondaryCurrency, rates);
   return (
     <div className="fee">
-      <strong>{money(p.fee.amount, p.fee.currency)}</strong>
+      <strong>
+        {money(converted, currency)}
+        {isConverted && converted !== null ? ' est.' : ''}
+      </strong>
       <small>
-        {money(convert(p.fee.amount, p.fee.currency, other, rates), other)}{' '}
-        {convert(p.fee.amount, p.fee.currency, other, rates) !== null ? 'est.' : ''}
+        {money(secondaryAmount, secondaryCurrency)}
+        {isConverted ? ' original' : secondaryAmount !== null ? ' est.' : ''}
       </small>
       <span className={`tag ${p.fee.label === 'Published' ? 'green' : ''}`}>
         {p.fee.scope === 'annual'
@@ -262,7 +272,15 @@ export default function App() {
     return ['explore', 'compare', 'shortlist', 'priorities'].includes(v) ? (v as Page) : 'explore';
   };
   const [page, setPage] = useState<Page>(route);
-  const [filters, setFilters] = useState<Filters>(initialFilters);
+  const [displayCurrency, setDisplayCurrency, currencyError] = useStored<string>(
+    'sac-display-currency-v1',
+    'NZD',
+    (value) => {
+      if (value !== 'NZD' && value !== 'INR') throw new Error('Unsupported display currency');
+      return value;
+    },
+  );
+  const [filters, setFilters] = useState<Filters>({ ...initialFilters, currency: displayCurrency });
   const [selected, setSelected] = useState<string[]>(() => {
     const shared = new URLSearchParams(location.hash.split('?')[1] ?? '').get('ids');
     let ids: unknown = [];
@@ -337,8 +355,21 @@ export default function App() {
   }, [notice]);
   const update = (key: keyof Filters, value: string | boolean) =>
     setFilters((f) => ({ ...f, [key]: value }));
+  const changeCurrency = (currency: string) => {
+    const next = changeFilterCurrency(filters, currency, rates);
+    const nextLiving =
+      living === '' ? null : convert(Number(living), filters.currency, currency, rates);
+    if (next === null || (living !== '' && nextLiving === null)) {
+      setNotice('Add an exchange rate before converting your budget and living costs.');
+      return;
+    }
+    setFilters(next);
+    setDisplayCurrency(currency);
+    if (nextLiving !== null) setLiving(String(nextLiving));
+  };
   const results = filterProgrammes(programmes, filters, rates);
   const countryRows = programmes.filter((p) => p.country === filters.country);
+  const budgetRange = tuitionRange(countryRows, filters.currency, rates);
   const compareRows = selected.map((id) => programmes.find((p) => p.id === id)!);
   const savedIds = backup.items.map((i) => i.id);
   const save = (id: string) => {
@@ -446,16 +477,60 @@ export default function App() {
         ))}
       </Select>
       <div className="filter-divider" />
-      <label className="field">
-        <span>Maximum full tuition ({filters.currency})</span>
+      <fieldset className="tuition-budget">
+        <legend>Maximum full tuition ({filters.currency})</legend>
+        <div className="budget-value-row">
+          <output htmlFor="tuition-slider tuition-amount">
+            {filters.budget === '' ? 'No maximum' : money(Number(filters.budget), filters.currency)}
+          </output>
+          {filters.budget !== '' && (
+            <button className="text-button" onClick={() => update('budget', '')}>
+              No maximum
+            </button>
+          )}
+        </div>
         <input
-          type="number"
-          min="0"
-          placeholder="No maximum"
-          value={filters.budget}
-          onChange={(e) => update('budget', e.target.value)}
+          id="tuition-slider"
+          className="budget-slider"
+          type="range"
+          aria-label={`Maximum full tuition slider (${filters.currency})`}
+          aria-describedby="tuition-range-help"
+          aria-valuetext={
+            filters.budget === '' ? 'No maximum' : money(Number(filters.budget), filters.currency)
+          }
+          min={0}
+          max={budgetRange?.max ?? 1}
+          step="any"
+          disabled={budgetRange === null}
+          value={Math.min(Number(filters.budget || budgetRange?.max || 0), budgetRange?.max ?? 1)}
+          onChange={(e) => update('budget', String(Math.round(Number(e.target.value))))}
         />
-      </label>
+        <div className="budget-range-labels" aria-hidden="true">
+          <span>{money(0, filters.currency)}</span>
+          <span>{budgetRange ? money(budgetRange.max, filters.currency) : 'Unavailable'}</span>
+        </div>
+        <label className="field budget-exact">
+          <span>Or enter an exact maximum ({filters.currency})</span>
+          <input
+            id="tuition-amount"
+            type="number"
+            min="0"
+            step="any"
+            placeholder="No maximum"
+            value={filters.budget}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '' || (Number.isFinite(Number(value)) && Number(value) >= 0))
+                update('budget', value);
+            }}
+          />
+        </label>
+        <p className="helper" id="tuition-range-help">
+          {budgetRange
+            ? 'Drag to explore, or type a precise budget.'
+            : 'No comparable full-tuition quotes in this currency yet.'}
+        </p>
+      </fieldset>
       <p className="helper">
         Annual and partial quotes are excluded.{' '}
         {filters.currency === 'INR'
@@ -504,9 +579,17 @@ export default function App() {
               </a>
             ))}
           </nav>
-          <span className="device-label">
-            <ShieldCheck size={15} /> Local & private
-          </span>
+          <div className="header-tools">
+            <span className="device-label">
+              <ShieldCheck size={15} /> Local & private
+            </span>
+            <div className="display-currency">
+              <Select label="Display currency" value={filters.currency} onChange={changeCurrency}>
+                <option value="NZD">NZD</option>
+                <option value="INR">INR</option>
+              </Select>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -571,10 +654,6 @@ export default function App() {
                   </button>
                 )}
               </label>
-              <button className="currency-control" onClick={() => setSettings(true)}>
-                {filters.currency}
-                <ChevronDown size={14} />
-              </button>
             </div>
             <div className="catalogue-layout">
               <aside className={`filters ${showFilters ? 'shown' : ''}`}>{filterPanel}</aside>
@@ -653,7 +732,7 @@ export default function App() {
                           <th>LOCATION & DURATION</th>
                           <th>NEXT INTAKE</th>
                           <th className="fee-heading">
-                            TUITION <span>{filters.currency === 'NZD' ? 'NZD' : 'original'}</span>
+                            TUITION <span>{filters.currency}</span>
                           </th>
                           <th>
                             <span className="sr-only">Save</span>
@@ -823,13 +902,11 @@ export default function App() {
                   <Select
                     label="Compare full tuition in"
                     value={filters.currency}
-                    onChange={(v) => update('currency', v)}
+                    onChange={changeCurrency}
                   >
-                    {[...new Set(['NZD', 'INR', ...compareRows.map((p) => p.fee.currency)])].map(
-                      (c) => (
-                        <option key={c}>{c}</option>
-                      ),
-                    )}
+                    {['NZD', 'INR'].map((c) => (
+                      <option key={c}>{c}</option>
+                    ))}
                   </Select>
                   <button className="text-button" onClick={() => setSettings(true)}>
                     Edit exchange rate
@@ -922,7 +999,7 @@ export default function App() {
                           ),
                         ],
                         [
-                          'Original fee & scope',
+                          'Fee quote & scope',
                           (p: Programme) => <Fee p={p} rates={rates} currency={filters.currency} />,
                         ],
                         [
@@ -1226,7 +1303,16 @@ export default function App() {
                   <Select
                     label="Budget currency"
                     value={priorities.currency}
-                    onChange={(v) => setPriorities((p) => ({ ...p, currency: v }))}
+                    onChange={(currency) =>
+                      setPriorities((p) => {
+                        const budget =
+                          p.budget === ''
+                            ? null
+                            : convert(Number(p.budget), p.currency, currency, rates);
+                        if (p.budget !== '' && budget === null) return p;
+                        return { ...p, currency, budget: budget === null ? '' : String(budget) };
+                      })
+                    }
                   >
                     <option>NZD</option>
                     <option>INR</option>
@@ -1340,9 +1426,9 @@ export default function App() {
           </div>
         </div>
       )}
-      {(notice || storageError || priorityError || rateError) && (
+      {(notice || storageError || priorityError || rateError || currencyError) && (
         <div className="toast" role="status">
-          {notice || storageError || priorityError || rateError}
+          {notice || storageError || priorityError || rateError || currencyError}
           <button aria-label="Dismiss notification" onClick={() => setNotice('')}>
             <X size={15} />
           </button>
@@ -1473,9 +1559,9 @@ export default function App() {
           <Select
             label="Display / budget currency"
             value={filters.currency}
-            onChange={(v) => update('currency', v)}
+            onChange={changeCurrency}
           >
-            {[...new Set(['NZD', 'INR', ...programmes.map((p) => p.fee.currency)])].map((c) => (
+            {['NZD', 'INR'].map((c) => (
               <option key={c}>{c}</option>
             ))}
           </Select>

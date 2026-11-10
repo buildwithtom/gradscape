@@ -72,7 +72,10 @@ export function convert(
 ) {
   if (amount === null) return null;
   if (from === to) return amount;
-  return rates[from] > 0 && rates[to] > 0 ? (amount * rates[from]) / rates[to] : null;
+  if (!(rates[from] > 0 && rates[to] > 0)) return null;
+  const converted = (amount * rates[from]) / rates[to];
+  // Remove floating-point noise so switching currencies cannot drop a course exactly on budget.
+  return Number.isFinite(converted) ? Number(converted.toPrecision(15)) : null;
 }
 export function money(amount: number | null, currency: string) {
   return amount === null
@@ -106,6 +109,24 @@ export const initialFilters: Filters = {
   sort: 'institution',
   currency: 'NZD',
 };
+// The range uses the whole country catalogue so its bounds stay still while filtering.
+export function tuitionRange(rows: Programme[], currency: string, rates: Record<string, number>) {
+  const amounts = rows
+    .map((p) => convert(fullFee(p), p.fee.currency, currency, rates))
+    .filter((amount): amount is number => amount !== null && Number.isFinite(amount));
+  if (amounts.length === 0) return null;
+  const highest = Math.max(...amounts);
+  const increment = highest > 0 ? Math.max(1, 10 ** Math.floor(Math.log10(highest)) / 2) : 1;
+  return { min: 0, max: Math.max(1, Math.ceil(highest / increment) * increment) };
+}
+
+export function changeFilterCurrency(f: Filters, currency: string, rates: Record<string, number>) {
+  if (currency === f.currency) return f;
+  const budget = f.budget === '' ? null : convert(Number(f.budget), f.currency, currency, rates);
+  if (f.budget !== '' && budget === null) return null;
+  return { ...f, currency, budget: budget === null ? '' : String(budget) };
+}
+
 export function filterProgrammes(rows: Programme[], f: Filters, rates: Record<string, number>) {
   const matched = rows.filter(
     (p) =>
