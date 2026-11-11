@@ -23,6 +23,7 @@ import {
   CalendarDays,
 } from 'lucide-react';
 import countries from '../data/countries.json';
+import { Brand, GradScapeMark, IntakeIllustration } from './Brand';
 import {
   programmes,
   cityName,
@@ -272,6 +273,9 @@ export default function App() {
     return ['explore', 'compare', 'shortlist', 'priorities'].includes(v) ? (v as Page) : 'explore';
   };
   const [page, setPage] = useState<Page>(route);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [page]);
   const [displayCurrency, setDisplayCurrency, currencyError] = useStored<string>(
     'sac-display-currency-v1',
     'NZD',
@@ -553,13 +557,13 @@ export default function App() {
     <>
       <header className="header">
         <div className="header-inner">
-          <a className="brand" href="#explore">
-            <span className="brand-icon">
-              <Globe2 size={23} />
-            </span>
-            <span>
-              study abroad<span className="brand-sub">COMPARATOR</span>
-            </span>
+          <a
+            className="brand"
+            href="#explore"
+            aria-label="GradScape home"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+          >
+            <Brand />
           </a>
           <nav aria-label="Main navigation">
             {(
@@ -580,9 +584,6 @@ export default function App() {
             ))}
           </nav>
           <div className="header-tools">
-            <span className="device-label">
-              <ShieldCheck size={15} /> Local & private
-            </span>
             <div className="display-currency">
               <Select label="Display currency" value={filters.currency} onChange={changeCurrency}>
                 <option value="NZD">NZD</option>
@@ -596,27 +597,22 @@ export default function App() {
         {page === 'explore' && (
           <>
             <section className="intro">
-              <div>
+              <div className="intro-copy">
                 <div className="eyebrow">
-                  <span /> A WORLD OF POSSIBILITIES
+                  <span className="edition-dot" /> THE MASTER’S FINDER / EST. 2026
                 </div>
-                <h1>Find your next chapter.</h1>
-                <p>Compare master’s programmes. See the full picture. Make your move.</p>
+                <h1>
+                  A master’s.
+                  <br />
+                  <span>A change of scene.</span>
+                </h1>
+                <p>
+                  The courses. The costs. The calendar.
+                  <br />
+                  Find the master’s that makes sense for you.
+                </p>
               </div>
-              <div className="intro-timeline" aria-hidden="true">
-                <span className="tiny-label">YOUR 2027, TAKING SHAPE</span>
-                <div className="intro-line">
-                  {['FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL'].map((m, i) => (
-                    <span key={m} className={i === 1 || i === 5 ? 'highlight' : ''}>
-                      <i />
-                      {m}
-                    </span>
-                  ))}
-                </div>
-                <span className="intro-caption">
-                  <span className="intake-dot confirmed" /> One timeline. More possibilities.
-                </span>
-              </div>
+              <IntakeIllustration />
             </section>
             <div className="search-bar">
               <div className="country-select">
@@ -686,8 +682,8 @@ export default function App() {
                 <div className="catalogue-note">
                   <Info size={16} />
                   <span>
-                    A starting point, with the uncertainty made clear. Imported fees and intakes
-                    need checking against official sources.
+                    A note on the numbers: imported fees and intakes still need checking. Open a
+                    course to see its sources.
                   </span>
                 </div>
                 {filters.sort === 'rank' && (
@@ -706,7 +702,9 @@ export default function App() {
                   <div className="empty">
                     <Globe2 size={36} />
                     <h3>
-                      {countryRows.length ? 'No programmes match yet.' : 'A new chapter is coming.'}
+                      {countryRows.length
+                        ? 'No programmes match yet.'
+                        : 'This map is still being drawn.'}
                     </h3>
                     <p>
                       {countryRows.length
@@ -817,11 +815,10 @@ export default function App() {
                     <CalendarDays size={25} />
                   </div>
                   <div>
-                    <span className="eyebrow">SEE HOW YOUR OPTIONS LINE UP</span>
-                    <h3>Different programmes. One clear timeline.</h3>
+                    <span className="eyebrow">THE DATES MAKE A DIFFERENCE</span>
+                    <h3>Same year. Different starting lines.</h3>
                     <p>
-                      Select a few programmes to compare their intakes, fees and the details that
-                      matter.
+                      Pick two to four courses. We’ll put their start dates on the same calendar.
                     </p>
                   </div>
                   <div className="mini-timeline" aria-hidden="true">
@@ -843,9 +840,9 @@ export default function App() {
           <>
             <div className="page-heading">
               <div>
-                <div className="eyebrow">THE BIGGER PICTURE</div>
-                <h1>Find the right fit.</h1>
-                <p>Your options, side by side. Compare the facts and the questions still to ask.</p>
+                <div className="eyebrow">02 / THE COMPARISON</div>
+                <h1>Meet your options, side by side.</h1>
+                <p>The fees, the dates, and the questions worth asking before you apply.</p>
               </div>
               <div className="actions">
                 <button className="button" onClick={() => go('explore')}>
@@ -859,7 +856,7 @@ export default function App() {
             {selected.length < 2 ? (
               <div className="empty">
                 <GitCompareArrows size={36} />
-                <h2>A little perspective helps.</h2>
+                <h2>Give your options some company.</h2>
                 <p>Select two to four programmes in Explore to build your comparison.</p>
                 <button className="button primary" onClick={() => go('explore')}>
                   Explore programmes <ArrowRight size={16} />
@@ -870,7 +867,7 @@ export default function App() {
                 <section className="panel timeline-panel">
                   <div className="section-heading">
                     <div>
-                      <span className="eyebrow">MAKE TIME FOR YOUR NEXT CHAPTER</span>
+                      <span className="eyebrow">SOME DATES BELONG ON THE CALENDAR</span>
                       <h2>Your intake timeline</h2>
                     </div>
                     <Select label="Timeline year" value={timelineYear} onChange={setTimelineYear}>
@@ -1119,7 +1116,7 @@ export default function App() {
           <>
             <div className="page-heading">
               <div>
-                <div className="eyebrow">A LITTLE CLOSER TO YOUR NEXT CHAPTER</div>
+                <div className="eyebrow">03 / THE KEEPERS</div>
                 <h1>
                   My shortlist<span className="heading-count">{backup.items.length}</span>
                 </h1>
@@ -1128,7 +1125,7 @@ export default function App() {
               <div className="actions">
                 <button
                   className="button"
-                  onClick={() => download('study-abroad-shortlist.json', backup)}
+                  onClick={() => download('gradscape-shortlist.json', backup)}
                 >
                   <Download size={16} /> Export backup
                 </button>
@@ -1148,7 +1145,7 @@ export default function App() {
             {backup.items.length === 0 ? (
               <div className="empty">
                 <Bookmark size={36} />
-                <h2>Keep your possibilities close.</h2>
+                <h2>Found something worth a second look?</h2>
                 <p>Save a programme in Explore, then add notes and track your next step here.</p>
                 <button className="button primary" onClick={() => go('explore')}>
                   Find programmes <ArrowRight size={16} />
@@ -1231,9 +1228,9 @@ export default function App() {
           <>
             <div className="page-heading">
               <div>
-                <div className="eyebrow">START WITH WHAT MATTERS TO YOU</div>
+                <div className="eyebrow">04 / YOUR NON-NEGOTIABLES</div>
                 <h1>My priorities</h1>
-                <p>A little direction for your search. You can change these anytime.</p>
+                <p>A good course has to work for your life. Start with the things that matter.</p>
               </div>
               <span className="device-label">
                 <ShieldCheck size={16} /> Saved on this device
@@ -1241,7 +1238,7 @@ export default function App() {
             </div>
             <div className="priorities-layout">
               <section className="panel priorities-form">
-                <h2>Your next chapter, your way.</h2>
+                <h2>Set your own brief.</h2>
                 <fieldset>
                   <legend>Preferred countries</legend>
                   <div className="chip-options">
@@ -1371,16 +1368,63 @@ export default function App() {
             </div>
           </>
         )}
-        <footer className="footer">
-          <span className="footer-brand">
-            <Globe2 size={17} /> Study Abroad Comparator
-          </span>
-          <span>A clearer path to your next chapter.</span>
-          <button className="text-button" onClick={() => setSettings(true)}>
-            Data & exchange rates <ArrowUpRight size={13} />
-          </button>
-        </footer>
       </main>
+      <footer className="footer">
+        <div className="footer-main">
+          <div className="footer-intro">
+            <span className="eyebrow">A BIG DECISION. A BETTER START.</span>
+            <h2>
+              Go on.
+              <br />
+              See what’s out there<span>↗</span>
+            </h2>
+          </div>
+          <div className="footer-links">
+            <span className="footer-label">YOUR FIELD GUIDE</span>
+            <a href="#explore">
+              Find a master’s <ArrowUpRight size={16} />
+            </a>
+            <a href="#compare">
+              Compare your options <ArrowUpRight size={16} />
+            </a>
+            <a href="#shortlist">
+              Revisit your shortlist <ArrowUpRight size={16} />
+            </a>
+            <button onClick={() => setSettings(true)}>
+              <span>Data & exchange rates</span> <ArrowUpRight size={16} />
+            </button>
+          </div>
+          <div className="footer-note">
+            <GradScapeMark />
+            <p>
+              Made for the research rabbit holes, the “what ifs”, and the shortlist that keeps
+              getting longer.
+            </p>
+            <p className="footer-storage">
+              Your notes stay in this browser. Export a backup before clearing your browser data.
+            </p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <a
+            className="brand"
+            href="#explore"
+            aria-label="GradScape home"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
+          >
+            <Brand />
+          </a>
+          <span>Independent research. Your decision.</span>
+          <span>© {new Date().getFullYear()} GradScape</span>
+          <a
+            href="#explore"
+            className="back-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            BACK TO EXPLORING ↑
+          </a>
+        </div>
+      </footer>
       {selected.length > 0 && (
         <div className="compare-tray">
           <div className="tray-inner">
@@ -1388,7 +1432,7 @@ export default function App() {
               <GitCompareArrows size={21} />
               <span>
                 <b>{selected.length} of 4 selected</b>
-                <small>Your next chapter, side by side</small>
+                <small>Keep the good ones together</small>
               </span>
             </div>
             <div className="tray-courses">

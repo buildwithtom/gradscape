@@ -3,7 +3,7 @@ test('explore, compare, timeline, shortlist persistence and backup preview', asy
   const errors: string[] = [];
   page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'Find your next chapter.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /A master’s.*A change of scene/ })).toBeVisible();
   await page.getByLabel('City / campus', { exact: true }).selectOption('Auckland');
   await page.getByLabel('Month', { exact: true }).selectOption('02');
   await expect(
@@ -28,7 +28,8 @@ test('explore, compare, timeline, shortlist persistence and backup preview', asy
   ).toBeVisible();
   await expect(page.locator('.timeline-marker.confirmed')).toHaveCount(2);
   await expect(page.locator('.timeline-marker.tentative')).toHaveCount(2);
-  await page.screenshot({ path: 'docs/comparison.png', fullPage: false });
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.screenshot({ path: 'docs/comparison.png', fullPage: false, animations: 'disabled' });
   await page.getByRole('link', { name: 'Explore', exact: true }).click();
   await page
     .getByRole('button', {
@@ -72,7 +73,7 @@ test('explore, compare, timeline, shortlist persistence and backup preview', asy
   );
   await page.getByRole('link', { name: 'Explore', exact: true }).click();
   await page.getByLabel('Country', { exact: true }).selectOption('AU');
-  await expect(page.getByRole('heading', { name: 'A new chapter is coming.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'This map is still being drawn.' })).toBeVisible();
   await expect(page.getByText('2 of 4 selected', { exact: true })).toBeVisible();
   expect(errors).toEqual([]);
 });
@@ -146,7 +147,11 @@ for (const width of [390, 768, 1440])
       })
       .check();
     await page.evaluate(() => window.scrollTo(0, 0));
-    await page.screenshot({ path: `docs/explore-${width}.png`, fullPage: false });
+    await page.screenshot({
+      path: `docs/explore-${width}.png`,
+      fullPage: false,
+      animations: 'disabled',
+    });
     await page.getByRole('button', { name: 'Compare 2', exact: true }).click();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
       true,

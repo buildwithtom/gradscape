@@ -1,6 +1,6 @@
-# Study Abroad Comparator
+# GradScape
 
-A local-first tool for comparing international master’s programmes without losing the uncertainty behind a spreadsheet cell. Explore a country, filter by campus and intake, compare two to four pathways on one calendar, and keep a private shortlist with questions for admissions.
+GradScape helps applicants compare international master’s programmes without losing the uncertainty behind a spreadsheet cell. Explore a country, filter by campus and intake, compare two to four pathways on one calendar, and keep a private shortlist with questions for admissions.
 
 **Repository description:** Compare international master’s programmes with transparent tuition, shared intake timelines and device-private shortlists.
 
@@ -78,7 +78,7 @@ Nothing has been published or pushed. The app uses Vite `base: './'` and hash na
 **GitHub:** create an empty repository in your account, then run (replace YOUR_USERNAME):
 
 ```sh
-git remote add origin https://github.com/YOUR_USERNAME/study-abroad-comparator.git
+git remote add origin https://github.com/YOUR_USERNAME/gradscape.git
 git push -u origin main
 ```
 
@@ -87,3 +87,7 @@ For GitHub Pages, enable Settings → Pages → GitHub Actions and use the inclu
 ## First-release verification limits
 
 The software workflow is tested. The catalogue still needs a complete official-source audit, fee/levy separation, exact duration checks for seven pathways, confirmed 2027 intakes and deadlines, country-specific entry-equivalence guidance, and ranking reuse permission. Empty countries are explicitly labelled. Adding another country requires data only; conversion needs a known currency rate, otherwise the original quote is shown and conversion is unavailable.
+
+## GradScape identity
+
+A travel field guide for choosing a master’s: ultramarine, warm paper, citron and vermilion, with Bricolage Grotesque headings, Instrument Sans body text and IBM Plex Mono calendar labels. All fonts ship locally. The original vector G mark combines contour lines with an outward route; the standalone wordmark is `public/gradscape-logo.svg`, and its mark/favicon is `public/gradscape-mark.svg`. The sticky navigation keeps the currency selector available while you research. Storage guidance lives in the footer and shortlist instead of the brand header. Existing shortlist and preference keys are preserved through the rename.
